@@ -1,7 +1,7 @@
 import './App.css';
 import React, {useState, useEffect } from 'react';
 
-const helloWorld = "Hello World";
+const helloWorld = "Hello World from React initial state";
 let shouldUpdate = true;
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
 
   useEffect(() => {
     if (shouldUpdate) {
-      setMessage("New value");
+      // setMessage("New value");
     }
     return function () {
       shouldUpdate = false;
