@@ -14,6 +14,6 @@ public class HelloWorldController {
 
     @GetMapping("/api/hello")
     public String helloWorldFromApi() {
-        return helloWorld;
+        return helloWorld + " from Spring API";
     }
 }
