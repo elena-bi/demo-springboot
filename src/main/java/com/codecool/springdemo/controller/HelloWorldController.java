@@ -11,4 +11,9 @@ public class HelloWorldController {
     public String getHelloWorld() {
         return helloWorld;
     }
+
+    @GetMapping("/api/hello")
+    public String helloWorldFromApi() {
+        return helloWorld;
+    }
 }
