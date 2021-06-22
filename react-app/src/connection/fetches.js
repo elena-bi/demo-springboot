@@ -11,7 +11,7 @@ async function doFetchWithGet(url) {
   return response;
 }
 
-async function doFetchWithGetAndCallBack(url, callback = function(text) {} ) {
+export async function doFetchWithGetAndCallBack(url, callback = function(text) {} ) {
     let responseStatus = 0;
     doFetchWithGet(url)
         .then(
@@ -32,4 +32,21 @@ async function doFetchWithGetAndCallBack(url, callback = function(text) {} ) {
         );
 }
 
-export default doFetchWithGetAndCallBack;
+export async function doFetchWithPost(url, message) {
+  const headersAndBody = {
+    method: 'POST',
+    mode: 'cors',
+    headers: {
+      "Content-Type": 'text/plain',
+    },
+    body: message
+  }
+
+  const response = await fetch(url, headersAndBody);
+
+
+  return response; 
+
+
+}
+
