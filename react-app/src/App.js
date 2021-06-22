@@ -1,7 +1,8 @@
 import './App.css';
 import React, {useState, useEffect } from 'react';
 import MessageContainer from './components/MessageContainer';
-import doFetchWithGetAndCallBack from './connection/fetches';
+import {doFetchWithGetAndCallBack} from './connection/fetches';
+import PostButton from './components/PostButton';
 
 const helloWorld = "Hello World from React initial state";
 let shouldUpdate = true;
@@ -33,7 +34,9 @@ function App() {
   return (
     <div className="App">
       <MessageContainer messageProp={message}/>
+      <PostButton postAddress={helloApiEndpoint}/>
     </div>
+
   );
 }
 
