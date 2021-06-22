@@ -39,6 +39,7 @@ public class HelloWorldController {
     @PostMapping("/api/hello")
     public void logPostedMessage(@RequestBody String message) {
         logger.info("Have received from client: " + message);
+        messageRepository.save(new Message(null,message));
 
     }
 }
